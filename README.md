@@ -1,12 +1,48 @@
-# React + Vite
+# TMDB React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação em **React** que consome a [API do TMDB](https://www.themoviedb.org/documentation/api) para permitir que usuários busquem filmes, vejam detalhes e montem uma lista de favoritos.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Busca de Filmes: Campo de pesquisa e listagem de resultados com pôster, título e ano.  
+- Paginação: Navegação entre páginas de resultados.  
+- Detalhes do Filme: Exibe diretor, elenco, sinopse e avaliação.  
+- Lista de Favoritos: Adicionar/remover filmes, persistidos no `localStorage`.  
+- Loading & Erros: Indicadores de carregamento e mensagens de erro.  
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)  
+- [React Router](https://reactrouter.com/)  
+- [TMDB API](https://developer.themoviedb.org/)  
+- LocalStorage  
+
+## Como Utilizar
+
+1. Criar um projeto React
+
+Você pode criar um projeto com **Vite** ou **Create React App**.  
+Exemplo com Vite:
+
+npm create vite@latest tmdb-react-app
+cd tmdb-react-app
+npm install
+
+2. Substituir a pasta src
+
+Apague a pasta src que veio com o projeto e substitua pela pasta src deste repositório.
+
+3. Configurar a chave da API
+
+Crie sua chave da TMDB API em TMDB
+.
+Depois, no arquivo src/services/api.js, substitua:
+const API_KEY = "YOUR_TMDB_API_KEY";
+
+4. Instalar dependências adicionais
+
+Instale o React Router (se não estiver no seu projeto):
+npm install react-router-dom
+
+5. Rodar o projeto
+npm run dev
